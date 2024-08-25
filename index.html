@@ -1,29 +1,51 @@
 <!DOCTYPE html>
 <html lang="es-mx">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
     <link rel="stylesheet" href="./styles/style.css">
-    
+
 </head>
+
 <body>
     <header>
         <img src="./imagenes/Logo.png" alt="Logo de Alura Latam" class="header-logo">
     </header>
-    <main class="main">
+    <main class="main0">
+        <section class="main">
+            <textarea type="text" id="main-texto" placeholder="Ingrese el texto aqui:" oninput="validarTexto(this)"></textarea>
+            <section class="main-texto-importante">
+                <img src="./imagenes/Group.png" alt="Importante">
+                <p>Solo letras minúsculas y sin acentos</p>
+            </section>
+            <section class="main-texto-botones">
+                <button onclick="encriptar();" id="encriptar" class="main-texto-botones-accion Encriptar">Encriptar</button>
+                <button onclick="desencriptar();" class="main-texto-botones-accion Desencriptar">Desencriptar</button>
+            </section>
 
-        <textarea type="text" id="main-texto" ></textarea>
-        <section class="main-texto-importante" >
-            <img src="./imagenes/Group.png" alt="Importante">
-            <p>Solo letras minúsculas y sin acentos</p>
         </section>
-        <section class="main-texto-botones">
-            <button class="main-texto-botones-accion Encriptar">Encriptar</button>
-            <button class="main-texto-botones-accion Desencriptar">Desencriptar</button>
-        </section>
+
+        <aside id="aside-resultado">
+            <div id="aside-texto-resultado">
+                <img id="aside-imagen" class="aside-resultado-image" src="./imagenes/pngtree-woman-working-cartoon-character-png-image_6111034.png"
+                    alt="Muñeco que cifra mensajes">
+                <div id="aside-texto">
+                    <h3 class="aside-resultado-titulo">Ningún mensaje fue <br> encontrado</h3>
+                    <p class="aside-resultado-texto">Ingresa el texto que desees encriptar o <br> desencriptar.</p>
+                    
+                </div>    
+            </div>
+            <button id="copia" onclick="copiar();">Copiar</button>
+        </aside>
+
+
     </main>
-    <footer></footer>
+    <footer class="footer">
+        <p>Realizado por Marisol Ramirez Contreras</p>
+    </footer>
     <script src="app.js"></script>
 </body>
+
 </html>
